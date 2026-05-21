@@ -1,0 +1,98 @@
+#+LANGUAGE: ru
+
+# Работа с русским языком
+#+LATEX_HEADER: \usepackage{cmap}                             % поиск в PDF
+#+LATEX_HEADER: \usepackage{mathtext}                         % русские буквы в формулах
+#+LATEX_HEADER: \usepackage[T2A]{fontenc}                     % кодировка
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}                   % кодировка исходного текста
+#+LATEX_HEADER: \usepackage[main=russian,english]{babel}      % локализация и переносы
+#+LATEX_HEADER: \usepackage{microtype}
+#+LATEX_HEADER: \emergencystretch=3em
+#+LATEX_HEADER: \tolerance=2000
+#+LATEX_HEADER: \hyphenpenalty=200
+#+LATEX_HEADER: \exhyphenpenalty=100
+
+# Пакеты для работы с математикой
+#+LATEX_HEADER: \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+#+LATEX_HEADER: \usepackage{icomma}
+
+# Нумерация формул (опционально)
+# \mathtoolsset{showonlyrefs=true}                            % показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+# \usepackage{leqno}                                          % нумерация формул слева
+
+# Шрифты
+#+LATEX_HEADER: \usepackage{euscript}	 
+#+LATEX_HEADER: \usepackage{mathrsfs}    
+
+# Настройка размеров шрифтов
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \setlength{\headheight}{28pt}
+# TODO: мне не удалось разобраться, как грамотно подбирать второе число в 
+# \@setfontsize\*, но ряд эксппериментов показывает, что "10" выравнивает текст весьма прилично :)
+#+LATEX_HEADER: \renewcommand\Huge{\@setfontsize\Huge{14pt}{10}}
+#+LATEX_HEADER: \renewcommand\huge{\@setfontsize\huge{14pt}{10}}
+#+LATEX_HEADER: \renewcommand\Large{\@setfontsize\Large{14pt}{10}}
+#+LATEX_HEADER: \renewcommand\large{\@setfontsize\large{12pt}{10}}
+#+LATEX_HEADER: \makeatother
+
+# Поля (геометрия страницы)
+#+LATEX_HEADER: \usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+# Русские списки
+#+LATEX_HEADER: \usepackage{enumitem}
+
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+#+LATEX_HEADER: \makeatother
+
+# Работа с картинками
+#+LATEX_HEADER: \usepackage{caption}
+#+LATEX_HEADER: \captionsetup{justification=centering}        % центрирование подписей к картинкам
+#+LATEX_HEADER: \usepackage{graphicx}                         % вставки рисунков
+#+LATEX_HEADER: \graphicspath{{images/}{images2/}}            % папки с картинками
+#+LATEX_HEADER: \setlength\fboxsep{3pt}                       % отступ рамки \fbox{} от рисунка
+#+LATEX_HEADER: \setlength\fboxrule{1pt}                      % толщина линий рамки \fbox{}
+#+LATEX_HEADER: \usepackage{wrapfig}                          % обтекание рисунков и таблиц текстом
+
+# Работа с таблицами
+#+LATEX_HEADER: \usepackage{array,tabularx,tabulary,booktabs} % дополнительная работа с таблицами
+#+LATEX_HEADER: \usepackage{longtable}                        % длинные таблицы
+#+LATEX_HEADER: \usepackage{multirow}                         % слияние строк в таблице
+
+# Красная строка
+#+LATEX_HEADER: \setlength{\parindent}{2em}
+
+# Интервалы
+#+LATEX_HEADER: \linespread{1}
+#+LATEX_HEADER: \usepackage{multirow}
+
+# TikZ
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{graphs,graphs.standard}
+
+# Верхний колонтитул
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \pagestyle{fancy}
+
+# Перенос знаков в формулах (по Львовскому)
+#+LATEX_HEADER: \newcommand*{\hm}[1]{#1\nobreak\discretionary{}{\hbox{$\mathsurround=0pt #1$}}{}}
+
+# Дополнительно
+#+LATEX_HEADER: \usepackage{float}                            % добавляет возможность работы с командой [H] которая улучшает расположение на странице
+#+LATEX_HEADER: \usepackage{gensymb}                          % красивые градусы
+#+LATEX_HEADER: \usepackage{caption}                          % пакет для подписей к рисункам, в частности, для работы caption*
+#+LATEX_HEADER: \usepackage{listings}                         % пакет для листингов с кодом
+#+LATEX_HEADER: \lstset{                                      % настройки для лисингов с кодом
+#+LATEX_HEADER: basicstyle=\small\ttfamily,
+#+LATEX_HEADER: columns=flexible,
+#+LATEX_HEADER: breaklines=true
+#+LATEX_HEADER: }
+
+# Hyperref (для ссылок внутри  pdf)
+#+LATEX_HEADER: \usepackage[unicode, pdftex]{hyperref}
+
+                                                              % Отступ перед первым абзацем в каждом разделе
+#+LATEX_HEADER: \usepackage{indentfirst}
+
+
+
